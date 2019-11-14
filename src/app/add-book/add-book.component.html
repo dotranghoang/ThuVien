@@ -1,0 +1,25 @@
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col-sm">
+      <p class="text-center">Tên Sách <input  [formControl]="inputBook" class="form-control" type="text"></p>
+      <p class="text-center">Chọn Thể Loại <select [formControl]="inputCategory" class="form-control form-control-sm">
+        <option *ngFor="let type of categoryList,index as i" value="{{type.id}}">{{type.category}}</option>
+      </select></p>
+    </div>
+    <div class="col-sm">
+      <p class="text-center">Tác Giả<input  [formControl]="inputAuthor" class="form-control" type="text"></p>
+      <p class="text-center">Chọn Nhà Xuất Bản <select [formControl]="inputPublisher" class="form-control form-control-sm">
+        <option *ngFor="let pub of publisherList,index as i" value="{{pub.id}}">{{pub.publisher}}</option>
+      </select></p>
+      <p class="text-center"><button class="btn btn-warning" (click)="createNewBook()"> Thêm Sách </button></p>
+    </div>
+    <div class="col-sm">
+      <p class="text-center"> Ảnh <input  [formControl]="inputImage" class="form-control" type="file" (change)="handleFileChooser($event.target.files)"></p>
+      <p class="text-center">Chọn Tình Trạng Sách <select [formControl]="inputStatus" class="form-control form-control-sm">
+        <option *ngFor="let sta of statusList,index as i" value="{{sta.id}}">{{sta.status}}</option>
+      </select></p>
+    </div>
+  </div>
+  </form>
+</div>

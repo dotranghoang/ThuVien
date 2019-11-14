@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <table   border="2" width="1150px"  style="height: 80px" class="table-active ">
+        <tr class="text-center">
+          <td>Hình Ảnh</td>
+          <td>Tên Sách</td>
+          <td>Tác Giả</td>
+          <td>Nhà Xuất Bản</td>
+          <td>Thể Loại</td>
+          <td>Tình Trạng Sách</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="text-center text-info" *ngFor="let book of bookList">
+          <td><img src="{{imgUrl + book.image}}" width="200px" height="100px" ></td>
+          <td>{{book.book}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.publisher.publisher}}</td>
+          <td>{{book.category.category}}</td>
+          <td>{{book.status.status}}</td>
+          <td><button class="btn btn-info">Mượn </button></td>
+          <td><button class="btn btn-danger">Sửa </button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>

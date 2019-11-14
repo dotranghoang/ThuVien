@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <h2 class="text-center"><button [routerLink]="'/create-customer'" class="btn btn-info">Create New Customer </button></h2>
+      <table  border="1" width="900x"  style="height: 80px" class="table-bordered " >
+        <tr class="text-center">
+          <td>Họ và Tên</td>
+          <td>Ngày Sinh</td>
+          <td>Địa Chỉ</td>
+          <td>Nghề Nghiệp</td>
+        </tr>
+        <tr *ngFor="let cus of customerList , index as i" class="text-center">
+          <td>{{cus.name}}</td>
+          <td>{{cus.birthday}}</td>
+          <td>{{cus.address}}</td>
+          <td>{{cus.job.job}}</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>

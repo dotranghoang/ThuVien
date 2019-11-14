@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <form class="row justify-content-center">
+        <div class="form-group row">
+          <div class="input-group">
+            <table>
+              <p class="text-center">Họ và Tên<input  [formControl]="inputName" class="form-control" type="text"></p>
+              <p class="text-center">Ngày sinh<input  [formControl]="inputBirthday" class="form-control" type="date"></p>
+              <p class="text-center">Địa chỉ<input  [formControl]="inputAddress" class="form-control" type="text"></p>
+              <p class="text-center">Chọn nghề nghiệp <select [formControl]="inputJob" class="form-control form-control-sm">
+                <option *ngFor="let job of jobList,index as i" value="{{job.id}}">{{job.job}}</option>
+              </select></p>
+              <p class="text-center"><button class="btn btn-warning" (click)="createNewCustomer()">Đăng kí</button></p>
+            </table>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
